@@ -1,618 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olied Ahmed Chowdhury | Software Engineer & AI Builder</title>
-  <meta name="description" content="Personal Portfolio of Olied Ahmed Chowdhury - 3rd Year Software Engineering Student at Metropolitan University, Sylhet. Proficient in C++, Python, Java, MySQL, Figma, and AI Chatbot Automation.">
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Olied Ahmed Chowdhury | Software Engineer</title>
+
+    <!-- Connects the HTML file with CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Ambient Lighting Effects -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-  <div class="ambient-glow glow-3"></div>
 
-  <!-- Interactive Particle Background Canvas -->
-  <canvas id="particles-canvas"></canvas>
+    <!-- ================= NAVIGATION ================= -->
+    <header>
+        <nav class="navbar container">
 
-  <!-- Navigation Bar -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="#hero" class="nav-brand">
-        <div class="brand-icon">O</div>
-        <span>Olied<span class="brand-accent">.dev</span></span>
-      </a>
+            <a href="#home" class="logo">OLIED<span>.</span></a>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#ai-demo" class="nav-link">AI Assistant</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary btn-sm">Let's Connect</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            <span>Available for Internships & Projects</span>
-          </div>
-          
-          <h1 class="hero-title">
-            Hi, I'm <br><span class="gradient-text">Olied Ahmed Chowdhury</span>
-          </h1>
-
-          <div class="hero-subtitle">
-            <span>Building Next-Gen</span>
-            <span class="typed-text gradient-text" id="typedText">Software Solutions</span>
-            <span class="typed-cursor">|</span>
-          </div>
-
-          <p class="hero-bio">
-            A passionate <strong>3rd-Year Software Engineering Student</strong> at <strong>Metropolitan University, Sylhet</strong>. 
-            Specializing in object-oriented architecture (C++, Java), intelligent AI automation & LLM chatbots (Python, LangGraph, Groq), 
-            and data-driven desktop & database applications.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">
-              <span>Explore My Work</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="https://github.com/Olied-Ahmed-chowdhury" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              <i class="fa-brands fa-github"></i>
-              <span>GitHub Profile</span>
-            </a>
-          </div>
-
-          <div class="hero-socials">
-            <a href="https://github.com/Olied-Ahmed-chowdhury" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/olied-ahmed-chowdhury-5085b4435/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="mailto:triple555chy@gmail.com" class="social-link" title="Email Me">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Hero Avatar Display -->
-        <div class="hero-visual">
-          <div class="avatar-backdrop-glow"></div>
-          <div class="avatar-wrapper">
-            <div class="avatar-card">
-              <img src="assets/images/olied.jpg" alt="Olied Ahmed Chowdhury" class="avatar-img">
-              <div class="avatar-overlay"></div>
-            </div>
-
-            <!-- Floating Badges -->
-            <div class="floating-badge badge-1">
-              <div class="badge-icon">
-                <i class="fa-solid fa-robot"></i>
-              </div>
-              <div class="badge-text">
-                <span class="badge-label">Focus</span>
-                <span class="badge-value">AI & Automation</span>
-              </div>
-            </div>
-
-            <div class="floating-badge badge-2">
-              <div class="badge-icon">
-                <i class="fa-solid fa-graduation-cap"></i>
-              </div>
-              <div class="badge-text">
-                <span class="badge-label">Student</span>
-                <span class="badge-value">Metropolitan Univ.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About & Stats Section -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Background</span>
-          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-          <p class="section-desc">Engineering solid software architectures with modern toolchains and automated intelligence.</p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-card">
-            <div>
-              <h3><i class="fa-solid fa-laptop-code"></i> Software Engineering Journey</h3>
-              <p class="about-text">
-                I am currently in my 3rd year studying B.Sc. in Software Engineering at Metropolitan University, Sylhet. 
-                My focus spans foundational computer science—mastering complex structured programming, data serialization, 
-                and relational databases—to modern intelligent AI chatbots powered by LangGraph and state-of-the-art LLMs.
-              </p>
-            </div>
-
-            <ul class="info-list">
-              <li class="info-item">
-                <i class="fa-solid fa-university"></i>
-                <div><strong>University:</strong> Metropolitan University, Sylhet</div>
-              </li>
-              <li class="info-item">
-                <i class="fa-solid fa-book-open-reader"></i>
-                <div><strong>Degree:</strong> B.Sc. in Software Engineering (3rd Year)</div>
-              </li>
-              <li class="info-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <div><strong>Location:</strong> Sylhet, Bangladesh</div>
-              </li>
-              <li class="info-item">
-                <i class="fa-solid fa-envelope"></i>
-                <div><strong>Email:</strong> triple555chy@gmail.com</div>
-              </li>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
 
-          <div class="stats-grid">
-            <div class="stat-box">
-              <div class="stat-number">10+</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">5+</div>
-              <div class="stat-label">Core Languages & Techs</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">3rd</div>
-              <div class="stat-label">Year Undergraduate</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Dedication & Curiosity</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-microchip"></i> Expertise</span>
-          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
-          <p class="section-desc">A versatile toolbox spanning low-level algorithms, object-oriented systems, UI/UX, and AI agents.</p>
-        </div>
 
-        <div class="skills-categories">
-          <!-- Programming Languages -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <div class="category-icon-wrap">
-                <i class="fa-solid fa-code"></i>
-              </div>
-              <h3 class="category-title">Core Languages</h3>
-            </div>
-            <div class="skills-badge-list">
-              <span class="skill-badge"><i class="fa-solid fa-c"></i> C++</span>
-              <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
-              <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
-              <span class="skill-badge"><i class="fa-solid fa-terminal"></i> C Language</span>
-              <span class="skill-badge"><i class="fa-solid fa-database"></i> SQL / MySQL</span>
-            </div>
-          </div>
+    <main>
 
-          <!-- AI & Automation -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <div class="category-icon-wrap purple">
-                <i class="fa-solid fa-brain"></i>
-              </div>
-              <h3 class="category-title">AI & Automation</h3>
-            </div>
-            <div class="skills-badge-list">
-              <span class="skill-badge"><i class="fa-solid fa-robot"></i> AI Chatbots</span>
-              <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> LangGraph</span>
-              <span class="skill-badge"><i class="fa-solid fa-bolt"></i> Groq Llama 3.3</span>
-              <span class="skill-badge"><i class="fa-solid fa-comment-dots"></i> NLP Sentiment</span>
-              <span class="skill-badge"><i class="fa-solid fa-chart-line"></i> Streamlit</span>
-            </div>
-          </div>
+        <!-- ================= HERO SECTION ================= -->
+        <section id="home" class="hero">
 
-          <!-- Systems & Desktop -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <div class="category-icon-wrap blue">
-                <i class="fa-solid fa-cubes"></i>
-              </div>
-              <h3 class="category-title">Systems & Architecture</h3>
-            </div>
-            <div class="skills-badge-list">
-              <span class="skill-badge"><i class="fa-solid fa-file-export"></i> Java Serialization</span>
-              <span class="skill-badge"><i class="fa-solid fa-desktop"></i> CustomTkinter GUI</span>
-              <span class="skill-badge"><i class="fa-solid fa-database"></i> Relational Schemas</span>
-              <span class="skill-badge"><i class="fa-solid fa-gears"></i> OOP Principles</span>
-            </div>
-          </div>
+            <div class="container hero-content">
 
-          <!-- Design & Tools -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <div class="category-icon-wrap emerald">
-                <i class="fa-solid fa-pen-nib"></i>
-              </div>
-              <h3 class="category-title">Design & Tooling</h3>
-            </div>
-            <div class="skills-badge-list">
-              <span class="skill-badge"><i class="fa-brands fa-figma"></i> Figma UI/UX</span>
-              <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
-              <span class="skill-badge"><i class="fa-brands fa-html5"></i> Modern HTML/CSS</span>
-              <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="hero-text">
 
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Portfolio</span>
-          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-          <p class="section-desc">Explore projects ranging from AI study companions and emergency systems to serialization engines.</p>
-        </div>
+                    <p class="small-heading">HELLO, I'M</p>
 
-        <!-- Filter Buttons -->
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="ai">AI & Automation</button>
-          <button class="filter-btn" data-filter="java">Java & Systems</button>
-          <button class="filter-btn" data-filter="python">Python & DB</button>
-          <button class="filter-btn" data-filter="cpp">C / C++ & Logic</button>
-        </div>
+                    <h1>
+                        Olied Ahmed<br>
+                        <span>Chowdhury.</span>
+                    </h1>
 
-        <!-- Project Cards Grid -->
-        <div class="projects-grid" id="projectsGrid">
-          <!-- Project 1: AI Study Buddy -->
-          <div class="project-card" data-category="ai python">
-            <div class="project-top">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-robot"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/Olied-Ahmed-chowdhury/AI-Chatbot-AI-Study-Buddy" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
-            </div>
-            <span class="project-category-tag">AI & Agentic Systems</span>
-            <h3 class="project-title">AI Study Buddy (Intelligent Chatbot)</h3>
-            <p class="project-desc">
-              An intelligent learning companion built with Python, Streamlit, LangGraph, and Groq Llama 3.3. 
-              Provides personalized study schedules, context-aware interactive chatbot tutoring, and multi-turn study workflows.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">LangGraph</span>
-              <span class="tech-tag">Groq Llama 3.3</span>
-              <span class="tech-tag">Streamlit</span>
-            </div>
-          </div>
+                    <h2>Software Engineering Student & AI Builder</h2>
 
-          <!-- Project 2: LifelineGo Smart Ambulance System -->
-          <div class="project-card" data-category="java ai">
-            <div class="project-top">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-truck-medical"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/Olied-Ahmed-chowdhury" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
-            </div>
-            <span class="project-category-tag">Smart Healthcare System</span>
-            <h3 class="project-title">LifelineGo Smart Ambulance System</h3>
-            <p class="project-desc">
-              A responsive emergency dispatch and routing management platform designed to connect patients with real-time nearest ambulance units, tracking critical parameters during transit.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Emergency Dispatch</span>
-              <span class="tech-tag">Location Logic</span>
-              <span class="tech-tag">System Design</span>
-            </div>
-          </div>
+                    <p class="hero-description">
+                        I am a 3rd year Software Engineering student at
+                        Metropolitan University, Sylhet, passionate about
+                        software development, artificial intelligence,
+                        web development, and UI/UX design.
+                    </p>
 
-          <!-- Project 3: Java Serialization Hotel Management -->
-          <div class="project-card" data-category="java">
-            <div class="project-top">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-hotel"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/Olied-Ahmed-chowdhury/JAVA_Serialization_project-demo" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
-            </div>
-            <span class="project-category-tag">Object Persistence & Systems</span>
-            <h3 class="project-title">Java Serialization Hotel Management</h3>
-            <p class="project-desc">
-              A comprehensive hotel reservation and administration system implementing high-efficiency Java Object Serialization/Deserialization byte streaming for robust state persistence and retrieval.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Object Serialization</span>
-              <span class="tech-tag">Byte Streams</span>
-              <span class="tech-tag">OOP Architecture</span>
-            </div>
-          </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary-btn">
+                            View My Work
+                        </a>
 
-          <!-- Project 4: News Management System SQL -->
-          <div class="project-card" data-category="python">
-            <div class="project-top">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-newspaper"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/Olied-Ahmed-chowdhury/News_Mangement_Project_SQL" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
-            </div>
-            <span class="project-category-tag">Desktop App & Database</span>
-            <h3 class="project-title">News Management System (CustomTkinter + SQL)</h3>
-            <p class="project-desc">
-              A desktop publishing suite engineered with Python CustomTkinter for a sleek dark-themed editor dashboard, featuring end-to-end MySQL database CRUD operations for articles, categories, and authors.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">CustomTkinter</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">CRUD Operations</span>
-            </div>
-          </div>
+                        <a href="#contact" class="btn secondary-btn">
+                            Contact Me
+                        </a>
+                    </div>
 
-          <!-- Project 5: Airline Tweet Sentiment Analysis -->
-          <div class="project-card" data-category="ai python">
-            <div class="project-top">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-chart-pie"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/Olied-Ahmed-chowdhury/Airline-tweet-sentiment-analysis-using-nlp" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
-            </div>
-            <span class="project-category-tag">NLP & Data Science</span>
-            <h3 class="project-title">Airline Sentiment Analysis (NLP)</h3>
-            <p class="project-desc">
-              Natural Language Processing pipeline for classifying customer sentiment from airline tweets into positive, neutral, or negative categories using text preprocessing and machine learning models.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">NLP</span>
-              <span class="tech-tag">Text Tokenization</span>
-              <span class="tech-tag">Sentiment Model</span>
-            </div>
-          </div>
-
-          <!-- Project 6: Structured Programming & Loops Suite -->
-          <div class="project-card" data-category="cpp">
-            <div class="project-top">
-              <div class="project-folder-icon">
-                <i class="fa-solid fa-code-branch"></i>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/Olied-Ahmed-chowdhury/structured-programming-Assignment-3-Patterns-using-Nested-Loops-" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
-            </div>
-            <span class="project-category-tag">Algorithms & Logic</span>
-            <h3 class="project-title">Structured Programming & Nested Logic Suite</h3>
-            <p class="project-desc">
-              Comprehensive suite of computational logic, nested loop geometry, pattern generation algorithms, and condition pipelines engineered in C and C++.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">C Language</span>
-              <span class="tech-tag">Nested Loops</span>
-              <span class="tech-tag">Pattern Algorithms</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive AI Assistant Demo Section -->
-    <section class="section" id="ai-demo">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-sparkles"></i> Live Demo</span>
-          <h2 class="section-title">Talk to Olied's <span class="gradient-text">AI Assistant</span></h2>
-          <p class="section-desc">Experience an interactive demo of Olied's AI chatbot capabilities right on this page.</p>
-        </div>
-
-        <div class="ai-demo-card">
-          <div class="ai-demo-header">
-            <div class="ai-demo-bot-info">
-              <div class="ai-avatar">
-                <i class="fa-solid fa-robot"></i>
-              </div>
-              <div class="ai-meta">
-                <h4>Olied AI Companion</h4>
-                <span>Online & Ready</span>
-              </div>
-            </div>
-            <div class="badge-status">
-              <span class="tech-tag">Powered by Llama 3.3 Prompt Engine</span>
-            </div>
-          </div>
-
-          <div class="ai-chat-window" id="chatWindow">
-            <div class="chat-msg bot">
-              <div class="msg-bubble">
-                👋 Hello! I am Olied's virtual portfolio assistant. Ask me anything about Olied's software engineering background, projects (like LifelineGo, AI Study Buddy, Java Serialization), skills, or how to contact him!
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick questions chips -->
-          <div class="quick-prompts">
-            <button class="quick-prompt-btn" onclick="sendQuickPrompt('What are your main technical skills?')">Skills?</button>
-            <button class="quick-prompt-btn" onclick="sendQuickPrompt('Tell me about the AI Study Buddy project')">AI Study Buddy?</button>
-            <button class="quick-prompt-btn" onclick="sendQuickPrompt('What is your university & background?')">Education?</button>
-            <button class="quick-prompt-btn" onclick="sendQuickPrompt('How can I contact or hire you?')">Contact details?</button>
-          </div>
-
-          <div class="ai-chat-input-bar">
-            <input type="text" id="chatInput" class="chat-input" placeholder="Ask a question about Olied's work..." onkeydown="if(event.key==='Enter') sendMessage()">
-            <button class="chat-send-btn" id="sendBtn" onclick="sendMessage()" aria-label="Send Message">
-              <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get in Touch</span>
-          <h2 class="section-title">Let's <span class="gradient-text">Collaborate</span></h2>
-          <p class="section-desc">Have a question, opportunity, or interesting project idea? Drop a message!</p>
-        </div>
-
-        <div class="contact-grid">
-          <!-- Contact Info -->
-          <div class="contact-info-card">
-            <div>
-              <h3><i class="fa-solid fa-comments"></i> Reach Out Directly</h3>
-              <p class="about-text">
-                I am actively seeking software engineering internships, collaborative development opportunities, and tech networking.
-              </p>
-            </div>
-
-            <div class="contact-method-list">
-              <a href="mailto:triple555chy@gmail.com" class="contact-method-item">
-                <div class="contact-icon-box">
-                  <i class="fa-solid fa-envelope"></i>
                 </div>
-                <div class="contact-method-info">
-                  <h5>Email Address</h5>
-                  <p>triple555chy@gmail.com</p>
-                </div>
-              </a>
 
-              <a href="https://www.linkedin.com/in/olied-ahmed-chowdhury-5085b4435/" target="_blank" rel="noopener noreferrer" class="contact-method-item">
-                <div class="contact-icon-box">
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </div>
-                <div class="contact-method-info">
-                  <h5>LinkedIn</h5>
-                  <p>olied-ahmed-chowdhury</p>
-                </div>
-              </a>
 
-              <a href="https://github.com/Olied-Ahmed-chowdhury" target="_blank" rel="noopener noreferrer" class="contact-method-item">
-                <div class="contact-icon-box">
-                  <i class="fa-brands fa-github"></i>
+                <div class="hero-card">
+
+                    <div class="card-number">01</div>
+
+                    <div class="card-line"></div>
+
+                    <p>
+                        Building ideas through
+                        <strong>code</strong>, creativity
+                        and continuous learning.
+                    </p>
+
+                    <div class="card-bottom">
+                        <span>SYLHET, BD</span>
+                        <span>2026</span>
+                    </div>
+
                 </div>
-                <div class="contact-method-info">
-                  <h5>GitHub</h5>
-                  <p>Olied-Ahmed-chowdhury</p>
-                </div>
-              </a>
+
             </div>
 
-            <div class="hero-socials">
-              <a href="https://github.com/Olied-Ahmed-chowdhury" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/olied-ahmed-chowdhury-5085b4435/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="mailto:triple555chy@gmail.com" class="social-link" title="Email">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
+        </section>
+
+
+        <!-- ================= ABOUT SECTION ================= -->
+        <section id="about" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>01</span>
+                    <h2>About Me</h2>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-intro">
+                        <h3>
+                            Turning curiosity into
+                            <span>technical skills.</span>
+                        </h3>
+                    </div>
+
+                    <div class="about-text">
+
+                        <p>
+                            I am Olied Ahmed Chowdhury, currently studying
+                            B.Sc. in Software Engineering at Metropolitan
+                            University, Sylhet.
+                        </p>
+
+                        <p>
+                            My learning journey focuses on building strong
+                            foundations in computer science and software
+                            engineering. I enjoy working with structured
+                            programming, data serialization, relational
+                            databases, algorithms, and modern software
+                            development practices.
+                        </p>
+
+                        <p>
+                            Alongside my academic work, I am interested in
+                            Artificial Intelligence, web development, and
+                            UI/UX design. I enjoy exploring how technology
+                            and creative design can work together to build
+                            useful digital experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
 
-          <!-- Direct Message Form -->
-          <div class="contact-form-card">
-            <form id="contactForm" onsubmit="handleFormSubmit(event)">
-              <div class="form-group">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" id="name" class="form-input" placeholder="e.g. Alex Smith" required>
-              </div>
+        </section>
 
-              <div class="form-group">
-                <label for="email" class="form-label">Your Email</label>
-                <input type="email" id="email" class="form-input" placeholder="e.g. alex@example.com" required>
-              </div>
 
-              <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" id="subject" class="form-input" placeholder="e.g. Project Collaboration / Internship Opportunity" required>
-              </div>
+        <!-- ================= SKILLS SECTION ================= -->
+        <section id="skills" class="section skills-section">
 
-              <div class="form-group">
-                <label for="message" class="form-label">Message</label>
-                <textarea id="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
-              </div>
+            <div class="container">
 
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                <i class="fa-solid fa-paper-plane"></i>
-                <span>Send Message</span>
-              </button>
-            </form>
-          </div>
+                <div class="section-heading">
+                    <span>02</span>
+                    <h2>Skills</h2>
+                </div>
+
+                <p class="section-description">
+                    Technologies and concepts I am learning and working with.
+                </p>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-number">01</div>
+                        <h3>Programming</h3>
+                        <p>
+                            C, C++, Java, Python and structured programming
+                            fundamentals.
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <div class="skill-number">02</div>
+                        <h3>Web Development</h3>
+                        <p>
+                            HTML, CSS and responsive web design with a focus
+                            on clean user experiences.
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <div class="skill-number">03</div>
+                        <h3>Database</h3>
+                        <p>
+                            Relational databases, SQL, MySQL and database
+                            management fundamentals.
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <div class="skill-number">04</div>
+                        <h3>AI & Data</h3>
+                        <p>
+                            Artificial intelligence concepts, data analysis,
+                            machine learning fundamentals and experimentation.
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <div class="skill-number">05</div>
+                        <h3>UI/UX Design</h3>
+                        <p>
+                            Interface design, visual hierarchy, wireframing
+                            and user-centered design principles.
+                        </p>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <div class="skill-number">06</div>
+                        <h3>Tools</h3>
+                        <p>
+                            Git, GitHub, VS Code, Figma and other modern
+                            development tools.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS SECTION ================= -->
+        <section id="projects" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>03</span>
+                    <h2>Projects & Experience</h2>
+                </div>
+
+                <p class="section-description">
+                    Some of my academic and personal work.
+                </p>
+
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+
+                        <div class="project-top">
+                            <span>01</span>
+                            <span>DATABASE</span>
+                        </div>
+
+                        <h3>News Feed Management System</h3>
+
+                        <p>
+                            A database-driven news management system with
+                            user management, news creation and CRUD
+                            functionality.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>MySQL</span>
+                            <span>Tkinter</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-top">
+                            <span>02</span>
+                            <span>AI / ML</span>
+                        </div>
+
+                        <h3>Airline Sentiment Analysis</h3>
+
+                        <p>
+                            A machine learning project focused on analyzing
+                            airline-related tweets and classifying customer
+                            sentiment.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>EDA</span>
+                            <span>Machine Learning</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-top">
+                            <span>03</span>
+                            <span>WEB DESIGN</span>
+                        </div>
+
+                        <h3>MU Tech Fest 2026</h3>
+
+                        <p>
+                            A university technology festival portal concept
+                            focusing on modern UI/UX, event management and
+                            responsive interface design.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Figma</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-top">
+                            <span>04</span>
+                            <span>PERSONAL</span>
+                        </div>
+
+                        <h3>Personal Portfolio</h3>
+
+                        <p>
+                            A responsive personal portfolio website designed
+                            to showcase my skills, projects, education and
+                            interests.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>UI/UX</span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EDUCATION SECTION ================= -->
+        <section id="education" class="section education-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>04</span>
+                    <h2>Education</h2>
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="education-year">
+                        2024 - Present
+                    </div>
+
+                    <div class="education-info">
+
+                        <h3>
+                            B.Sc. in Software Engineering
+                        </h3>
+
+                        <h4>
+                            Metropolitan University, Sylhet
+                        </h4>
+
+                        <p>
+                            Currently in my 3rd year, developing knowledge
+                            in software engineering, programming,
+                            databases, algorithms, artificial intelligence,
+                            software testing and system design.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact" class="section contact-section">
+
+            <div class="container contact-container">
+
+                <div class="contact-text">
+
+                    <span class="contact-label">05 / GET IN TOUCH</span>
+
+                    <h2>
+                        Let's build something
+                        <span>interesting.</span>
+                    </h2>
+
+                    <p>
+                        Have an idea, project or opportunity?
+                        Feel free to reach out.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-details">
+
+                    <div class="contact-item">
+
+                        <span>Email</span>
+
+                        <a href="mailto:triple555chy@gmail.com">
+                            triple555chy@gmail.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <span>Location</span>
+
+                        <p>Sylhet, Bangladesh</p>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <span>University</span>
+
+                        <p>Metropolitan University</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="container footer-content">
+
+            <p>
+                © 2026 Olied Ahmed Chowdhury
+            </p>
+
+            <p>
+                Software Engineering • AI • Web • UI/UX
+            </p>
+
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-copy">
-        &copy; 2026 <strong>Olied Ahmed Chowdhury</strong>. Built with precision & passion.
-      </div>
-      <a href="#hero" class="back-to-top" aria-label="Back to Top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Custom Scripts -->
-  <script src="script.js"></script>
 </body>
 </html>
